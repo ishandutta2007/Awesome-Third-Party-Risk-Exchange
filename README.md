@@ -28,7 +28,7 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## Table of Contents
 
-- [SaaS/Hosted Platforms](#saas-products)
+- [SaaS/Hosted Platforms](#saashosted-platforms)
 
 - [Open-Source GitHub Projects](#open-source-github-projects)
 
@@ -40,63 +40,18 @@ Contributions welcome! Open a PR to add/update entries. Keep descriptions factua
 
 ## SaaS/Hosted Platforms
 
-- **[SecurityScorecard](https://securityscorecard.com/)**  
-
-  Leading security ratings platform providing continuous outside-in scores, threat intelligence, and portfolio-level third-party risk visibility.
-
-
-
-- **[BitSight](https://www.bitsight.com/)**  
-
-  Cyber risk ratings platform focused on continuous monitoring of third-party and internal security posture with financial-impact insights.
-
-
-
-- **[Black Kite](https://blackkite.com/)**  
-
-  Third-party cyber risk platform offering detailed technical ratings, vulnerability insights, and risk quantification for vendor portfolios.
-
-
-
-- **[Panorays](https://panorays.com/)**  
-
-  Automated third-party security risk management platform combining external scanning with collaborative assessment workflows.
-
-
-
-- **[UpGuard](https://www.upguard.com/)**  
-
-  Comprehensive TPRM and attack-surface management platform with vendor ratings, continuous monitoring, questionnaires, and breach risk insights.
-
-
-
-- **[ProcessUnity](https://www.processunity.com/)**  
-
-  Enterprise third-party risk and GRC platform supporting vendor lifecycle management, assessments, and compliance workflows.
-
-
-
-- **[Whistic](https://www.whistic.com/)**  
-
-  Vendor assessment and trust exchange platform focused on security questionnaires, evidence collection, and streamlined due diligence.
-
-
-
-- **[OneTrust Vendorpedia](https://www.onetrust.com/)**  
-
-  Vendor risk and privacy management capabilities within the OneTrust platform, including assessment libraries and continuous monitoring integrations.
-
-
-
-- **[Prevalent](https://www.prevalent.net/)**  
-
-  Third-party risk management platform covering vendor onboarding, assessments, continuous monitoring, and risk reporting.
-
-
-
-- **[RiskRecon (Mastercard)](https://www.riskrecon.com/)**  
-
-  Cyber risk rating and continuous monitoring platform focused on actionable third-party security insights.
+| Platform | Description | Starting Pricing | Free Tier / Free Trial Limits |
+| :--- | :--- | :--- | :--- |
+| **[SecurityScorecard](https://securityscorecard.com/)** | Leading security ratings platform providing continuous outside-in scores, threat intelligence, and portfolio-level third-party risk visibility. | Starts at ~$20,000/yr (core portfolio monitoring; single-seat base licenses start around $2,400/yr) | **Free forever plan**: 1 company domain self-monitoring (unlimited users); 14-day free trial of Business plan (full scoring & assessments). |
+| **[BitSight](https://www.bitsight.com/)** | Cyber risk ratings platform focused on continuous monitoring of third-party and internal security posture with financial-impact insights. | Starts at ~$21,825/yr (SMB tier; median enterprise contracts range $25,000–$50,000+/yr) | **Free forever plan**: Access to Trust Management Hub (TMH) & 1 complimentary company cyber risk rating report; 14-day evaluation trial on request. |
+| **[Black Kite](https://blackkite.com/)** | Third-party cyber risk platform offering detailed technical ratings, vulnerability insights, and risk quantification for vendor portfolios. | Starts at ~$25,000/yr (median annual contract ~$29,160/yr; per-vendor/per-tier pricing with unlimited user seats) | **Free trial**: 14-day guided proof-of-concept / sandbox trial with sample vendor portfolio assessment (no free-forever plan). |
+| **[Panorays](https://panorays.com/)** | Automated third-party security risk management platform combining external scanning with collaborative assessment workflows. | Starts at ~$15,000/yr (base vendor monitoring tier; mid-market deployments range $25,000–$50,000/yr) | **Free forever plan**: Starter plan with own security posture score & shareable Trust Center profile; 14-day trial with up to 5 vendor assessments. |
+| **[UpGuard](https://www.upguard.com/)** | Comprehensive TPRM and attack-surface management platform with vendor ratings, continuous monitoring, questionnaires, and breach risk insights. | Starts at $1,750/mo ($21,000/yr billed annually) for Standard tier (monitors up to 50 vendors) | **Free forever plan**: Monitor up to 5 vendors with Trust Exchange AI questionnaire access; 14-day full-feature trial (no credit card required). |
+| **[ProcessUnity](https://www.processunity.com/)** | Enterprise third-party risk and GRC platform supporting vendor lifecycle management, assessments, and compliance workflows. | Starts at ~$25,000/yr (base TPRM package; tiered Silver/Gold/Platinum options scale by vendor volume) | **Free trial**: 14-to-30-day proof-of-concept evaluation sandbox with sample vendor workflows upon demo request (no free-forever plan). |
+| **[Whistic](https://www.whistic.com/)** | Vendor assessment and trust exchange platform focused on security questionnaires, evidence collection, and streamlined due diligence. | Starts at ~$15,000 – $20,625/yr (average contract ~$20,625/yr via Vendr for standard TPRM tiers) | **Free forever plan**: Whistic Basic Profile (publish security profile to Trust Catalog, 40+ questionnaire templates, 3 profile shares/mo); 14-day trial for automation. |
+| **[OneTrust Vendorpedia](https://www.onetrust.com/)** | Vendor risk and privacy management capabilities within the OneTrust platform, including assessment libraries and continuous monitoring integrations. | Starts at $10,000/yr (minimum annual contract floor; median contract ~$11,835/yr) | **Free trial**: 14-day pilot evaluation with select TPRM module workflows upon sales approval + free standalone questionnaire response tools (no free-forever platform tier). |
+| **[Prevalent](https://www.prevalent.net/)** | Third-party risk management platform covering vendor onboarding, assessments, continuous monitoring, and risk reporting. | Starts at ~£3,625/yr (~$4,600/yr) per basic G-Cloud unit / ~$25,000/yr for core enterprise TPRM suite | **Free trial**: 30-day guided proof-of-concept trial including select vendor risk assessments upon demo approval (no free-forever plan). |
+| **[RiskRecon (Mastercard)](https://www.riskrecon.com/)** | Cyber risk rating and continuous monitoring platform focused on actionable third-party security insights. | Starts at ~$10,000/yr (base vendor portfolio monitoring tier) | **Free trial**: 30-day free trial with cyber risk rating reports for up to 50 vendors, own-domain rating report, and Risk Priority Matrix access. |
 
 
 
