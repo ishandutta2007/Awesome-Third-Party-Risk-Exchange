@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#060913" />
+      <stop offset="40%" stop-color="#0e172a" />
+      <stop offset="80%" stop-color="#0f213e" />
+      <stop offset="100%" stop-color="#070c18" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="accentCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.9" />
+    </linearGradient>
+
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0" />
+      <stop offset="30%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="70%" stop-color="#a855f7" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <!-- Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.08" />
+      <circle cx="40" cy="0" r="1.5" fill="#38bdf8" fill-opacity="0.15" />
+    </pattern>
+
+    <style>
+      @keyframes radarSweep {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes pulseGlow {
+        0%, 100% { opacity: 0.35; transform: scale(1); }
+        50% { opacity: 0.85; transform: scale(1.08); }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes scanBeam {
+        0% { transform: translateY(-100px); opacity: 0; }
+        30% { opacity: 0.6; }
+        70% { opacity: 0.6; }
+        100% { transform: translateY(400px); opacity: 0; }
+      }
+      @keyframes dashAnim {
+        to { stroke-dashoffset: -100; }
+      }
+      @keyframes badgePulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 4px rgba(56, 189, 248, 0.4)); }
+        50% { transform: scale(1.02); filter: drop-shadow(0 0 10px rgba(168, 85, 247, 0.6)); }
+      }
+      
+      .radar-sweep {
+        transform-origin: 980px 180px;
+        animation: radarSweep 10s linear infinite;
+      }
+      .pulse-node {
+        animation: pulseGlow 4s ease-in-out infinite;
+        transform-origin: center;
+      }
+      .floating-element {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+      .scanner-line {
+        animation: scanBeam 6s linear infinite;
+      }
+      .dashed-connection {
+        stroke-dasharray: 6, 6;
+        animation: dashAnim 12s linear infinite;
+      }
+      .dynamic-badge {
+        animation: badgePulse 5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" fill="url(#bgGrad)" rx="16" />
+  <rect width="1200" height="360" fill="url(#grid)" rx="16" />
+
+  <!-- Accent Lines -->
+  <line x1="0" y1="2" x2="1200" y2="2" stroke="url(#glowLine)" stroke-width="3" filter="url(#glow)" />
+  <line x1="0" y1="358" x2="1200" y2="358" stroke="url(#glowLine)" stroke-width="2" />
+
+  <!-- Dynamic Risk Radar -->
+  <g opacity="0.85">
+    <circle cx="980" cy="180" r="140" fill="none" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.2" />
+    <circle cx="980" cy="180" r="100" fill="none" stroke="#818cf8" stroke-width="1" stroke-opacity="0.3" />
+    <circle cx="980" cy="180" r="60" fill="none" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.4" />
+    <circle cx="980" cy="180" r="20" fill="#0ea5e9" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1.5" />
+    
+    <line x1="830" y1="180" x2="1130" y2="180" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="4,4" />
+    <line x1="980" y1="30" x2="980" y2="330" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.3" stroke-dasharray="4,4" />
+
+    <!-- Radar Sweep Beam -->
+    <g class="radar-sweep">
+      <path d="M 980 180 L 1120 180 A 140 140 0 0 0 1078.9 81.1 Z" fill="url(#accentCyan)" fill-opacity="0.25" />
+      <line x1="980" y1="180" x2="1120" y2="180" stroke="#38bdf8" stroke-width="2" filter="url(#glow)" />
+    </g>
+
+    <!-- TPRM Vendor Nodes -->
+    <circle class="pulse-node" cx="930" cy="130" r="5" fill="#10b981" filter="url(#glow)" />
+    <circle cx="930" cy="130" r="10" fill="none" stroke="#10b981" stroke-width="0.8" stroke-opacity="0.5" />
+    <text x="942" y="134" fill="#a7f3d0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">Tier 1 · Low Risk</text>
+
+    <circle class="pulse-node" cx="1040" cy="120" r="5" fill="#f59e0b" filter="url(#glow)" />
+    <circle cx="1040" cy="120" r="10" fill="none" stroke="#f59e0b" stroke-width="0.8" stroke-opacity="0.5" />
+    <text x="1052" y="124" fill="#fde68a" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">Vendor Posture: B</text>
+
+    <circle class="pulse-node" cx="1020" cy="240" r="6" fill="#f43f5e" filter="url(#glow)" />
+    <circle cx="1020" cy="240" r="12" fill="none" stroke="#f43f5e" stroke-width="0.8" stroke-opacity="0.5" />
+    <text x="1034" y="244" fill="#fecdd3" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">Action Required</text>
+
+    <circle class="pulse-node" cx="910" cy="230" r="5" fill="#38bdf8" filter="url(#glow)" />
+    <circle cx="910" cy="230" r="10" fill="none" stroke="#38bdf8" stroke-width="0.8" stroke-opacity="0.5" />
+    <text x="840" y="234" fill="#bae6fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600">SOC 2 / ISO</text>
+
+    <!-- Mesh Connections -->
+    <line class="dashed-connection" x1="930" y1="130" x2="1040" y2="120" stroke="#818cf8" stroke-width="1" stroke-opacity="0.4" />
+    <line class="dashed-connection" x1="1040" y1="120" x2="1020" y2="240" stroke="#818cf8" stroke-width="1" stroke-opacity="0.4" />
+    <line class="dashed-connection" x1="1020" y1="240" x2="910" y2="230" stroke="#818cf8" stroke-width="1" stroke-opacity="0.4" />
+    <line class="dashed-connection" x1="910" y1="230" x2="930" y2="130" stroke="#818cf8" stroke-width="1" stroke-opacity="0.4" />
+  </g>
+
+  <!-- Scanner Laser Line -->
+  <g class="scanner-line">
+    <line x1="0" y1="0" x2="1200" y2="0" stroke="url(#glowLine)" stroke-width="1.5" filter="url(#glow)" />
+  </g>
+
+  <!-- Left Content / Typography -->
+  <g transform="translate(60, 0)">
+    <g class="floating-element" transform="translate(0, 48)">
+      <rect x="0" y="0" width="52" height="52" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.6" filter="url(#glow)" />
+      <path d="M 26 12 L 39 18 V 28 C 39 36 26 42 26 42 C 26 42 13 36 13 28 V 18 Z" fill="url(#shieldGrad)" />
+      <path d="M 21 27 L 25 31 L 32 23" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+
+    <g transform="translate(66, 62)">
+      <rect x="0" y="0" width="220" height="26" rx="6" fill="#1e293b" fill-opacity="0.8" stroke="#38bdf8" stroke-width="1" stroke-opacity="0.4" />
+      <circle cx="12" cy="13" r="3.5" fill="#38bdf8" class="pulse-node" />
+      <text x="24" y="17" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">CURATED TPRM ECOSYSTEM</text>
+    </g>
+
+    <text x="0" y="152" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.5">
+      Awesome <tspan fill="url(#accentCyan)">Third-Party Risk Exchange</tspan>
+    </text>
+
+    <text x="0" y="192" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="400">
+      Enterprise Vendor Risk Management, Security Ratings, Continuous Monitoring &amp; Supply Chain Cyber Risk
+    </text>
+
+    <g transform="translate(0, 230)">
+      <g class="dynamic-badge">
+        <rect x="0" y="0" width="150" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5" />
+        <text x="14" y="22" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🛡️ Vendor Risk (TPRM)</text>
+      </g>
+
+      <g transform="translate(162, 0)">
+        <rect x="0" y="0" width="154" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#818cf8" stroke-width="1.2" stroke-opacity="0.5" />
+        <text x="14" y="22" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">📊 Security Ratings</text>
+      </g>
+
+      <g transform="translate(328, 0)">
+        <rect x="0" y="0" width="168" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#c084fc" stroke-width="1.2" stroke-opacity="0.5" />
+        <text x="14" y="22" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">⚡ Supply Chain Risk</text>
+      </g>
+
+      <g transform="translate(508, 0)">
+        <rect x="0" y="0" width="164" height="34" rx="8" fill="#1e293b" fill-opacity="0.9" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.5" />
+        <text x="14" y="22" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600">🌐 SaaS &amp; Open-Source</text>
+      </g>
+    </g>
+
+    <text x="0" y="306" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">
+      ⚡ Outside-In Threat Intelligence &nbsp;•&nbsp; 📋 Automated Security Questionnaires &nbsp;•&nbsp; 🔒 GRC &amp; Compliance Frameworks
+    </text>
+  </g>
+</svg>
